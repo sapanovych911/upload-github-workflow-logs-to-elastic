@@ -48,6 +48,7 @@ def main():
         r = requests.get(metadata_url, stream=True, headers={
             "Authorization": f"token {github_token}"
         })
+        print(f"{r.content}")
         metadata = json.loads(r.content)
         jobs_url = metadata.get('jobs_url')
         metadata.pop('repository')
@@ -91,7 +92,7 @@ def main():
         print(f"Error: {output}")
         print(f"::set-output name=result::{output}")
         sys.exit(-1)
-
+    print(f"{jobs}")    
     for job_id in jobs:
         try:
             job_logs_url = f"https://api.github.com/repos/{github_org}/{github_repo}/actions/jobs/{job_id}/logs"
