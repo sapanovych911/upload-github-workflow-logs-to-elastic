@@ -1,3 +1,15 @@
 requests
 elasticsearch==7.8.0
 python-json-logger
+
+
+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
+
+3ShapeInternal/observity_system
+
+curl -v -u 'sapanovych911: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' -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/3ShapeInternal/observity_system/actions/runs/2620120089
+
+
+ curl -u 'sapanovych911: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' -H "Accept: appl
+ication/vnd.github.v3+json" https://api.github.com/repositories/506625425/actions/runs/2620120089/logs
+root@ip-172-31-81-191:/var/log# curl -u 'sapanovych911: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' -H "Accept: application/vnd.github+json" https://api.github.com/repos/sapanovych911/observity_system/actions/runs/2620120089
