@@ -103,7 +103,7 @@ def main():
                 print(f"Error: {output}")
                 print(f"::set-output name=result::{output}")
                 sys.exit(-1)
-
+            print str(r.content)
             logs = io.BytesIO(r.content)
             for log in logs:
                 elastic_logger.info(log.strip().decode(), extra={
