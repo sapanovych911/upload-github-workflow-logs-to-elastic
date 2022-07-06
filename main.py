@@ -48,9 +48,6 @@ def main():
         r = requests.get(metadata_url, stream=True, headers={
             "Authorization": f"token {github_token}"
         })
-        print(f"=====metadata===")
-        print(f"{r.content}")
-        print(f"=====metadata===")
         metadata = json.loads(r.content)
         jobs_url = metadata.get('jobs_url')
         metadata.pop('repository')
@@ -65,6 +62,9 @@ def main():
         sys.exit(-1)
 
     # extract all done jobs
+    print(f"=====JobsURL===")
+    print(f"{jobs_url}")
+    print(f"=====JobsURL===")
     jobs = {}
     try:
         jobs_response = requests.get(jobs_url, headers={
