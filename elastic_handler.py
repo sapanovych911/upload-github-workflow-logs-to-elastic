@@ -36,7 +36,7 @@ except:
 try:
     assert ELASTIC_INDEX not in (None, '')
     now = datetime.datetime.now()
-    elastic_index = f"{ELASTIC_INDEX}-{now.month}-{now.day}"
+    elastic_index = f"search-{ELASTIC_INDEX}-{now.month}-{now.day}"
 except:
     output = "The input ELASTIC_INDEX is not set"
     print(f"Error: {output}")
