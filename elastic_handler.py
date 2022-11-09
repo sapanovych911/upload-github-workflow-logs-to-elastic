@@ -44,7 +44,7 @@ except:
 
 try:
     es = elasticsearch.Elasticsearch(
-        cloudid = ELASTIC_API_KEY
+        cloudid = ELASTIC_API_KEY,
         basic_auth=("elastic", ELASTIC_API_KEY_ID)
     )
 except elasticsearch.exceptions.AuthorizationException as exc:
