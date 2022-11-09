@@ -44,8 +44,8 @@ except:
 
 try:
     es = elasticsearch.Elasticsearch(
-        [ELASTIC_HOST]
-      #  api_key=(ELASTIC_API_KEY_ID, ELASTIC_API_KEY)
+        cloudid = ELASTIC_API_KEY
+        basic_auth=("elastic", ELASTIC_API_KEY_ID)
     )
 except elasticsearch.exceptions.AuthorizationException as exc:
     output = "Authentication to elastic failed"
